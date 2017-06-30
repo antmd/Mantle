@@ -1,0 +1,17 @@
+DEPLOYMENT_LOCATION = NO
+DSTROOT = $(HOME)/Library/Frameworks/
+SKIP_INSTALL = YES
+DYLIB_INSTALL_NAME_BASE = @rpath
+LD_DYLIB_INSTALL_NAME = $(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @loader_path/Frameworks
+DEFINES_MODULE = YES
+GCC_DYNAMIC_NO_PIC = NO
+GCC_STRICT_ALIASING = YES
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+CLANG_ENABLE_MODULES = YES
+
+// Frameworks need '$SRCROOT' to find includes in the framework's header files that are
+// fully qualified by the framework's name, e.g. '#import <MyFramework/MyFrameworkHeader.h>'
+// A corollary is that a framework's headers must be in a subdirectory of $SRCROOT, with
+// the same name as the Framework (e.g. $SRCROOT/MyFramework/MyFrameworkHeader.h)
+HEADER_SEARCH_PATHS = $(inherited)

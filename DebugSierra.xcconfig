@@ -1,0 +1,11 @@
+//
+//  Debug.xcconfig
+//  MailHub
+//
+//  Created by Ant on 20/04/2012.
+//  Copyright (c) 2012 Dervish Software. All rights reserved.
+//
+
+#include "Abstract/Common.xcconfig"
+#include "Abstract/Debug.xcconfig"
+#include "Abstract/Sierra.xcconfig"
